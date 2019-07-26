@@ -44,16 +44,7 @@ const setIngredients = (state, action) => {
 };
 
 const fetchIngredientsFailed = (state, action) => {
-  return updateObject(state, {
-    //error: true
-    ingredients: {
-      salad: 0,
-      bacon: 0,
-      cheese: 0,
-      meat: 0
-    },
-    totalPrice: 4
-  });
+  return updateObject(state, { error: true });
 };
 
 const reducer = (state = initialState, action) => {
