@@ -22,7 +22,7 @@ const modal = props => {
       </div>
     </Aux>
   );
-}
+};
 
 export default React.memo(modal, (prevProps, nextProps) =>
   nextProps.show === prevProps.show &&

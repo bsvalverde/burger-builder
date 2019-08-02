@@ -32,13 +32,13 @@ const burgerIngredient = props => {
       break;
     default:
       ingredient = null;
-  }
+  };
 
   return ingredient;
-}
+};
 
 burgerIngredient.propTypes = {
   type: PropTypes.string.isRequired
-}
+};
 
 export default burgerIngredient;

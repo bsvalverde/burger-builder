@@ -111,7 +111,7 @@ const ContactData = props => {
       userId: props.userId
     }
     props.onOrderBurger(order, props.token);
-  }
+  };
 
   const inputChangedHandler = (event, inputIdentifier) => {
     const updatedFormElement = updateObject(orderForm[inputIdentifier], {
@@ -127,7 +127,7 @@ const ContactData = props => {
     }
     setOrderForm(updatedOrderForm);
     setFormIsValid(formIsValid);
-  }
+  };
 
   const formElementsArray = [];
   for (let key in orderForm) {
@@ -153,7 +153,7 @@ const ContactData = props => {
     </form>
   );
   if (props.loading) {
-    form = <Spinner />
+    form = <Spinner />;
   }
   return (
     <div className={classes.ContactData}>
@@ -177,6 +177,6 @@ const mapDispatchToProps = dispatch => {
   return {
     onOrderBurger: (orderData, token) => dispatch(actions.purchaseBurger(orderData, token))
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(withErrorHandler(ContactData, axios)));

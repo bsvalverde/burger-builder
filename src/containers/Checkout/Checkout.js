@@ -9,11 +9,11 @@ const checkout = props => {
 
   const checkoutCancelledHandler = () => {
     props.history.goBack();
-  }
+  };
 
   const checkoutContinuedHandler = () => {
     props.history.replace('/checkout/contact-data');
-  }
+  };
 
   let summary = <Redirect to="/"/>;
   if (props.ings) {
@@ -39,6 +39,6 @@ const mapStateToProps = state => {
     ings: state.burgerBuilder.ingredients,
     purchased: state.order.purchased
   }
-}
+};
 
 export default connect(mapStateToProps)(checkout);

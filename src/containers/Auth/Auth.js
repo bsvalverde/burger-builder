@@ -59,16 +59,16 @@ const Auth = props => {
       })
     });
     setControls(updatedControls);
-  }
+  };
 
   const submitHandler = event => {
     event.preventDefault();
     props.onAuth(controls.email.value, controls.password.value, isSignup)
-  }
+  };
 
   const switchAuthModeHandler = () => {
     setIsSignup(!isSignup);
-  }
+  };
 
   const formElementsArray = [];
   for (let key in controls) {
@@ -90,7 +90,7 @@ const Auth = props => {
       changed={event => inputChangedHandler(event, formElement.id)} />
   ));
   if (props.loading) {
-    form = <Spinner />
+    form = <Spinner />;
   }
 
   let errorMessage = null;
@@ -118,7 +118,7 @@ const Auth = props => {
       </Button>
     </div>
   );
-}
+};
 
 const mapStateToProps = state => {
   return {

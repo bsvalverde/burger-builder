@@ -53,7 +53,7 @@ const App = props => {
       </Layout>
     </div>
   );
-}
+};
 
 const mapStateToProps = state => {
   return {
